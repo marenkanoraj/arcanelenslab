@@ -30,16 +30,40 @@ void sum_evens() {
     (void)acc;
 }
 
+void greatest_divisor() {
+    int a = 48, b = 18;
+    while (b != 0) {
+        int t = a % b;
+        a = b;
+        b = t;
+    }
+    (void)a;
+}
+
+void center_digit() {
+    int n = 98765;
+    int digits = 0;
+    int temp = n;
+    while (temp > 0) { digits += 1; temp /= 10; }
+    for (int i = 1; i < digits / 2; ++i) n /= 10;
+    int center = n % 10;
+    (void)center;
+}
+
 extern "C" int cobalt_beacon();
-extern void still_harbor();
-extern void verdant_thicket();
+extern "C" void amber_bridge();
+extern "C" void cobalt_haven();
+extern "C" void brisk_thorn();
 
 int main() {
     is_palindrome();
     double_value();
     balanced_sum();
     sum_evens();
-    still_harbor();
-    verdant_thicket();
+    greatest_divisor();
+    center_digit();
+    amber_bridge();
+    cobalt_haven();
+    brisk_thorn();
     return cobalt_beacon();
 }
